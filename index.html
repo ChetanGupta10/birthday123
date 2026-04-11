@@ -1,167 +1,250 @@
+```html
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Happy Birthday Jyoti</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
 
 <style>
+
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins', sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins', sans-serif;
 }
 
 html,body{
-  height:100%;
-  width:100%;
-  overflow:hidden;
-  position:fixed;
+height:100%;
+width:100%;
+overflow-x:hidden;
 }
 
 .slide{
-  position:absolute;
-  width:100%;
-  height:100%;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  transition:0.8s ease;
-  padding:20px;
-  color:white;
+position:absolute;
+width:100%;
+height:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+transition:0.8s ease;
+padding:25px;
+color:white;
 }
+
+/* Background Gradients */
 
 #slide1{background:linear-gradient(135deg,#ff4e50,#fc913a);}
 #slide2{background:linear-gradient(135deg,#141e30,#243b55); left:100%;}
 #slide3{background:linear-gradient(135deg,#42275a,#734b6d); left:200%;}
-#slide4{background:linear-gradient(135deg,#1f4037,#99f2c8); left:300%;}
+#slide4{background:linear-gradient(135deg,#2c3e50,#4ca1af); left:300%;}
 
 h1{
-  font-size:2rem;
-  margin-bottom:20px;
+font-size:2rem;
+margin-bottom:20px;
 }
 
-@media(min-width:768px){
-  h1{ font-size:2.8rem; }
-}
-
-button{
-  padding:12px 25px;
-  border:none;
-  border-radius:30px;
-  background:#fff;
-  color:#ff4e50;
-  font-size:1rem;
-  cursor:pointer;
-  margin-top:20px;
-}
-
-input{
-  padding:10px 20px;
-  border-radius:30px;
-  border:none;
-  font-size:1rem;
-  text-align:center;
-  margin-bottom:20px;
+.photo{
+width:80%;
+max-width:260px;
+border-radius:20px;
+margin:20px 0;
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
 }
 
 .message{
-  max-width:90%;
-  line-height:1.6;
-  font-size:1rem;
+max-width:95%;
+line-height:1.7;
+font-size:15px;
 }
+
+button{
+padding:14px 28px;
+border:none;
+border-radius:30px;
+background:#fff;
+color:#ff4e50;
+font-size:16px;
+cursor:pointer;
+margin-top:20px;
+}
+
+input{
+padding:12px 20px;
+border-radius:30px;
+border:none;
+font-size:16px;
+text-align:center;
+margin-bottom:20px;
+width:70%;
+}
+
+/* Mobile optimization */
+
+@media(max-width:600px){
+
+h1{
+font-size:1.6rem;
+}
+
+.message{
+font-size:14px;
+line-height:1.8;
+}
+
+.photo{
+width:85%;
+max-width:230px;
+}
+
+button{
+width:70%;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
+<!-- Slide 1 -->
+
 <div class="slide" id="slide1">
-  <h1>Enter Your Name 💖</h1>
-  <input type="text" id="username" placeholder="Type your name">
-  <button onclick="checkName()">Open Your Surprise</button>
+
+<h1>Enter Your Name 💖</h1>
+
+<input type="text" id="username" placeholder="Type your name">
+
+<button onclick="checkName()">Open Your Surprise</button>
+
 </div>
+
+
+<!-- Slide 2 -->
 
 <div class="slide" id="slide2">
-  <h1 id="greeting"></h1>
-  <button onclick="nextSlide()">Next</button>
+
+<h1 id="greeting"></h1>
+
+<button onclick="nextSlide()">Next</button>
+
 </div>
 
-<div class="slide" id="slide3">
-  <h1>For You 💖</h1>
-  <div class="message">
 
-Today is a very special day because it's your birthday, so <br><br>
+<!-- Slide 3 -->
+
+<div class="slide" id="slide3">
+
+<h1>For You 💖</h1>
+
+<img src="jyoti.jpeg" class="photo">
+
+<div class="message">
+
+Today is very special day because it's your birthday so,<br><br>
 
 Happy birthday dear madam ji 🥳💖🎁<br><br>
 
-You are so special to me, you make me smile 😊<br><br>
+You are so special to me , you makes me smiling 😊<br><br>
 
-You are very sweet and the purest soul I have ever met<br><br>
+you are very sweet and purest soul i have ever met<br><br>
 
 To the most beautiful person inside and out — happy birthday<br><br>
 
-No matter how many new people I meet in my life. You always top the list ❤️<br><br>
+No matter how many new people I met in my life. You always top the list ❤️<br><br>
 
-May your day be filled with love, laughter, and all your favourite things<br><br>
+May your day be filled with love , laughter and all your favourite things<br><br>
 
-Happiness looks gorgeous on you, so always keep smiling 😁<br><br>
+Happiness looks gorgeous on you so always keep smiling 😁<br><br>
 
-And again I am wishing you a happy wala birthday 🎂
+And again I am wishing you happy wala birthday 🎂
 
-  </div>
-  <button onclick="nextSlide()">Next</button>
 </div>
+
+<button onclick="nextSlide()">Next</button>
+
+</div>
+
+
+<!-- Slide 4 -->
 
 <div class="slide" id="slide4">
 
-  <h1>Stay kind. Stay strong. Stay beautifully YOU ✨</h1>
+<h1>Stay kind. Stay strong. Stay beautifully YOU ✨</h1>
 
-  <p style="margin-top:15px; font-size:16px;">
-    Happy Birthday Jyoti 🎂💖
-  </p>
+<p style="margin-top:15px; font-size:18px;">
+Happy Birthday Jyoti 🎂💖
+</p>
 
-  
+<p style="margin-top:25px; font-size:14px; opacity:0.8;">
+Created by Chetan Gupta ❤️
+</p>
+
 </div>
 
-<audio id="music" loop playsinline>
-  <source src="song.mp3" type="audio/mpeg">
+
+<!-- MUSIC -->
+
+<audio id="music" loop>
+<source src="song.mp3" type="audio/mpeg">
 </audio>
 
+
 <script>
+
 let current = 0;
+
 const music = document.getElementById("music");
+
 music.volume = 0.8;
 
 function checkName(){
-  let name = document.getElementById("username").value.trim();
 
-  if(name.toLowerCase() === "jyoti"){
+let name = document.getElementById("username").value.trim();
 
-    music.play().catch(err => {
-      console.log("Autoplay blocked:", err);
-    });
+if(name.toLowerCase() === "jyoti"){
 
-    document.getElementById("greeting").innerHTML =
-      "🎉 Happy Birthday " + name + " 🎉";
+music.play();
 
-    nextSlide();
-  } else {
-    alert("Oops! This surprise is only for Jyoti 💖");
-  }
+document.getElementById("greeting").innerHTML =
+"🎉 Happy Birthday " + name + " 🎉";
+
+nextSlide();
+
+}
+
+else{
+
+alert("Oops! This surprise is only for Jyoti 💖");
+
+}
+
 }
 
 function nextSlide(){
-  current++;
-  document.querySelectorAll(".slide").forEach((slide,i)=>{
-    slide.style.left = ((i - current) * 100) + "%";
-  });
+
+current++;
+
+document.querySelectorAll(".slide").forEach((slide,i)=>{
+
+slide.style.left = ((i - current) * 100) + "%";
+
+});
+
 }
+
 </script>
 
 </body>
+</html>
+```
+
 </html>
