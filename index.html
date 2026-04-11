@@ -39,12 +39,11 @@ padding:25px;
 color:white;
 }
 
-/* Background Gradients */
-
 #slide1{background:linear-gradient(135deg,#ff4e50,#fc913a);}
 #slide2{background:linear-gradient(135deg,#141e30,#243b55); left:100%;}
 #slide3{background:linear-gradient(135deg,#42275a,#734b6d); left:200%;}
-#slide4{background:linear-gradient(135deg,#2c3e50,#4ca1af); left:300%;}
+#slide4{background:linear-gradient(135deg,#1f4037,#99f2c8); left:300%;}
+#slide5{background:linear-gradient(135deg,#2c3e50,#4ca1af); left:400%;}
 
 h1{
 font-size:2rem;
@@ -85,8 +84,6 @@ text-align:center;
 margin-bottom:20px;
 width:70%;
 }
-
-/* Mobile optimization */
 
 @media(max-width:600px){
 
@@ -139,13 +136,11 @@ width:70%;
 </div>
 
 
-<!-- Slide 3 -->
+<!-- Slide 3 MESSAGE -->
 
 <div class="slide" id="slide3">
 
 <h1>For You 💖</h1>
-
-<img src="photo.jpeg" class="photo">
 
 <div class="message">
 
@@ -174,9 +169,22 @@ And again I am wishing you happy wala birthday 🎂
 </div>
 
 
-<!-- Slide 4 -->
+<!-- Slide 4 IMAGE -->
 
 <div class="slide" id="slide4">
+
+<img src="jyoti.jpeg" class="photo">
+
+<h1>Beautiful Smile 🎂</h1>
+
+<button onclick="nextSlide()">Next</button>
+
+</div>
+
+
+<!-- Slide 5 FINAL -->
+
+<div class="slide" id="slide5">
 
 <h1>Stay kind. Stay strong. Stay beautifully YOU ✨</h1>
 
@@ -191,12 +199,9 @@ Created by Chetan Gupta ❤️
 </div>
 
 
-<!-- MUSIC -->
-
 <audio id="music" loop>
 <source src="song.mp3" type="audio/mpeg">
 </audio>
-
 
 <script>
 
@@ -244,6 +249,9 @@ slide.style.left = ((i - current) * 100) + "%";
 </script>
 
 </body>
+</html>
+```
+
 </html>
 ```
 
