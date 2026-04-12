@@ -27,6 +27,17 @@ position:fixed;
 touch-action:none;
 }
 
+  .scroll-slide{
+overflow-y:auto;
+justify-content:flex-start;
+padding-top:60px;
+padding-bottom:40px;
+}
+
+.scroll-slide .message{
+margin-top:20px;
+}
+
 .slide{
 position:absolute;
 width:100%;
@@ -140,8 +151,7 @@ width:70%;
 
 <!-- Slide 3 MESSAGE -->
 
-<div class="slide" id="slide3">
-
+<div class="slide scroll-slide" id="slide3">
 <h1>For You 💖</h1>
 
 <div class="message">
