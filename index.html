@@ -1,12 +1,12 @@
-
+```html
 <!DOCTYPE html>
 <html>
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<title>Happy Birthday Jyoti</title>
+<title>Happy Birthday Anandi</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
 
@@ -24,19 +24,9 @@ height:100%;
 width:100%;
 overflow:hidden;
 position:fixed;
-touch-action:none;
 }
 
-  .scroll-slide{
-overflow-y:auto;
-justify-content:flex-start;
-padding-top:60px;
-padding-bottom:40px;
-}
-
-.scroll-slide .message{
-margin-top:20px;
-}
+/* SLIDES */
 
 .slide{
 position:absolute;
@@ -52,6 +42,8 @@ padding:25px;
 color:white;
 }
 
+/* BACKGROUNDS */
+
 #slide1{background:linear-gradient(135deg,#ff4e50,#fc913a);}
 #slide2{background:linear-gradient(135deg,#141e30,#243b55); left:100%;}
 #slide3{background:linear-gradient(135deg,#42275a,#734b6d); left:200%;}
@@ -63,6 +55,8 @@ font-size:2rem;
 margin-bottom:20px;
 }
 
+/* IMAGE */
+
 .photo{
 width:80%;
 max-width:260px;
@@ -71,11 +65,15 @@ margin:20px 0;
 box-shadow:0 10px 25px rgba(0,0,0,0.4);
 }
 
+/* MESSAGE */
+
 .message{
-max-width:95%;
+max-width:90%;
 line-height:1.7;
 font-size:15px;
 }
+
+/* BUTTON */
 
 button{
 padding:14px 28px;
@@ -88,6 +86,8 @@ cursor:pointer;
 margin-top:20px;
 }
 
+/* INPUT */
+
 input{
 padding:12px 20px;
 border-radius:30px;
@@ -97,6 +97,17 @@ text-align:center;
 margin-bottom:20px;
 width:70%;
 }
+
+/* SCROLLABLE MESSAGE PAGE */
+
+.scroll-slide{
+overflow-y:auto;
+justify-content:flex-start;
+padding-top:60px;
+padding-bottom:40px;
+}
+
+/* MOBILE */
 
 @media(max-width:600px){
 
@@ -125,7 +136,7 @@ width:70%;
 
 <body>
 
-<!-- Slide 1 -->
+<!-- SLIDE 1 -->
 
 <div class="slide" id="slide1">
 
@@ -138,7 +149,7 @@ width:70%;
 </div>
 
 
-<!-- Slide 2 -->
+<!-- SLIDE 2 -->
 
 <div class="slide" id="slide2">
 
@@ -149,30 +160,27 @@ width:70%;
 </div>
 
 
-<!-- Slide 3 MESSAGE -->
+<!-- SLIDE 3 MESSAGE -->
 
 <div class="slide scroll-slide" id="slide3">
+
 <h1>For You 💖</h1>
 
 <div class="message">
 
-Today is very special day because it's your birthday so,<br><br>
+Today is a special day because it's your birthday 🎂<br><br>
 
-Happy birthday dear madam ji 🥳💖🎁<br><br>
+Happy Birthday Anandi 🥳🎉<br><br>
 
-You are so special to me , you makes me smiling 😊<br><br>
+We have only started talking recently, but you already seem like a very nice and positive person 😊<br><br>
 
-you are very sweet and purest soul i have ever met<br><br>
+I hope this year brings you lots of happiness, success and beautiful moments in life ✨<br><br>
 
-To the most beautiful person inside and out — happy birthday<br><br>
+May your day be filled with smiles, laughter and all the things you love 🎁<br><br>
 
-No matter how many new people I met in my life. You always top the list ❤️<br><br>
+It’s nice getting to know you, and I hope you have a wonderful birthday today 🎉<br><br>
 
-May your day be filled with love , laughter and all your favourite things<br><br>
-
-Happiness looks gorgeous on you so always keep smiling 😁<br><br>
-
-And again I am wishing you happy wala birthday 🎂
+Once again wishing you a very Happy Birthday 🎂
 
 </div>
 
@@ -181,37 +189,42 @@ And again I am wishing you happy wala birthday 🎂
 </div>
 
 
-<!-- Slide 4 IMAGE -->
+<!-- SLIDE 4 IMAGE -->
 
 <div class="slide" id="slide4">
 
-<img src="photo.jpeg" class="photo">
+<img src="anandi.jpeg" class="photo">
 
-<h1>Beautiful Smile 🎂</h1>
+<h1>Have a wonderful birthday 🎂</h1>
 
 <button onclick="nextSlide()">Next</button>
 
 </div>
 
 
-<!-- Slide 5 FINAL -->
+<!-- SLIDE 5 FINAL -->
 
 <div class="slide" id="slide5">
 
-<h1>Stay kind. Stay strong. Stay beautifully YOU ✨</h1>
+<h1>Stay happy and keep smiling ✨</h1>
 
 <p style="margin-top:15px; font-size:18px;">
-Happy Birthday Jyoti 🎂💖
+Happy Birthday Anandi 🎂🎉
 </p>
 
-
+<p style="margin-top:25px; font-size:14px; opacity:0.8;">
+Created by Chetan Gupta ❤️
+</p>
 
 </div>
 
+
+<!-- MUSIC -->
 
 <audio id="music" loop>
 <source src="song.mp3" type="audio/mpeg">
 </audio>
+
 
 <script>
 
@@ -225,7 +238,7 @@ function checkName(){
 
 let name = document.getElementById("username").value.trim();
 
-if(name.toLowerCase() === "jyoti"){
+if(name.toLowerCase() === "anandi"){
 
 music.play();
 
@@ -238,7 +251,7 @@ nextSlide();
 
 else{
 
-alert("Oops! This surprise is only for Jyoti 💖");
+alert("Oops! This surprise is only for Anandi 🎉");
 
 }
 
@@ -261,8 +274,3 @@ slide.style.left = ((i - current) * 100) + "%";
 </body>
 </html>
 ```
-
-</html>
-
-
-</html>
