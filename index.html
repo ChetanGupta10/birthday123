@@ -22,13 +22,13 @@ body{
 overflow:hidden;
 }
 
-/* SLIDE CONTAINER */
+/* CONTAINER */
 
 .container{
 display:flex;
 width:800%;
 height:100vh;
-transition:transform 0.8s ease;
+transition:transform 0.7s ease;
 }
 
 /* SLIDES */
@@ -44,6 +44,15 @@ align-items:center;
 text-align:center;
 padding:25px;
 color:white;
+overflow:hidden;
+}
+
+/* ONLY MESSAGE SLIDE SCROLL */
+
+.message-slide{
+overflow-y:auto;
+justify-content:flex-start;
+padding-top:60px;
 }
 
 /* BACKGROUNDS */
@@ -76,9 +85,7 @@ box-shadow:0 10px 25px rgba(0,0,0,0.4);
 max-width:500px;
 font-size:15px;
 line-height:1.7;
-overflow-y:auto;
-max-height:60vh;
-padding-right:5px;
+margin-bottom:20px;
 }
 
 /* BUTTON */
@@ -116,7 +123,6 @@ font-size:22px;
 
 .message{
 font-size:14px;
-max-height:65vh;
 }
 
 .photo{
@@ -155,9 +161,9 @@ width:90%;
 
 </div>
 
-<!-- SLIDE 3 MESSAGE -->
+<!-- MESSAGE SLIDE (ONLY SCROLLABLE IF NEEDED) -->
 
-<div class="slide">
+<div class="slide message-slide">
 
 <h1>A Message</h1>
 
@@ -239,17 +245,17 @@ And remember, I will always be here for you whenever you need someone to talk to
 
 <script>
 
-let current = 0;
+let current=0;
 
-const container = document.getElementById("container");
+const container=document.getElementById("container");
 
-const music = document.getElementById("song");
+const music=document.getElementById("song");
 
 function nextSlide(){
 
 current++;
 
-container.style.transform = "translateX(-" + (current*100) + "vw)";
+container.style.transform="translateX(-"+(current*100)+"vw)";
 
 }
 
