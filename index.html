@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<title>Happy Birthday Anandi</title>
+<title>For Naina</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
 
@@ -61,7 +60,7 @@ margin-bottom:20px;
 width:80%;
 max-width:260px;
 border-radius:20px;
-margin:20px 0;
+margin:10px;
 box-shadow:0 10px 25px rgba(0,0,0,0.4);
 }
 
@@ -144,7 +143,7 @@ width:70%;
 
 <input type="text" id="username" placeholder="Type your name">
 
-<button onclick="checkName()">Open Your Surprise</button>
+<button onclick="checkName()">Open</button>
 
 </div>
 
@@ -164,23 +163,21 @@ width:70%;
 
 <div class="slide scroll-slide" id="slide3">
 
-<h1>For You 💖</h1>
+<h1>A Little Message</h1>
 
 <div class="message">
 
-Today is a special day because it's your birthday 🎂<br><br>
+Sometimes people come into our life unexpectedly and become special without even trying.<br><br>
 
-Happy Birthday Anandi 🥳🎉<br><br>
+Talking to you always feels easy and comfortable, and I really enjoy our conversations.<br><br>
 
-We have only started talking recently, but you already seem like a very nice and positive person 😊<br><br>
+You are a very kind, positive and genuine person, and that is something rare.<br><br>
 
-I hope this year brings you lots of happiness, success, and beautiful moments in life ✨<br><br>
+I just want you to know that I truly appreciate having you in my life.<br><br>
 
-May your day be filled with smiles, laughter, and all the things you love 🎁<br><br>
+No matter what happens, always stay the same beautiful person you are.<br><br>
 
-It’s nice getting to know you, and I hope you have a wonderful birthday today 🎉<br><br>
-
-Once again, wishing you a very Happy Birthday 🎂
+And remember, I will always be here for you whenever you need someone to talk to.
 
 </div>
 
@@ -189,13 +186,16 @@ Once again, wishing you a very Happy Birthday 🎂
 </div>
 
 
-<!-- SLIDE 4 IMAGE -->
+<!-- SLIDE 4 PHOTOS -->
 
 <div class="slide" id="slide4">
 
-<img src="photo.jpeg" class="photo">
+<img src="photon1.jpg" id="photon1" class="photo">
+<img src="photon2.jpg" id="photon2" class="photo">
+<img src="photon3.jpg" id="photon3" class="photo">
+<img src="photon4.jpg" id="photon4" class="photo">
 
-<h1>Have a wonderful birthday 🎂</h1>
+<h1>Memories ✨</h1>
 
 <button onclick="nextSlide()">Next</button>
 
@@ -209,17 +209,16 @@ Once again, wishing you a very Happy Birthday 🎂
 <h1>Stay happy and keep smiling ✨</h1>
 
 <p style="margin-top:15px; font-size:18px;">
-Happy Birthday, Anandi 🎂🎉
+Always stay the same amazing person 💫
 </p>
-
 
 </div>
 
 
 <!-- MUSIC -->
 
-<audio id="music" loop>
-<source src="song4.mp3" type="audio/mpeg">
+<audio id="song" loop>
+<source src="song.mp3" type="audio/mpeg">
 </audio>
 
 
@@ -227,7 +226,7 @@ Happy Birthday, Anandi 🎂🎉
 
 let current = 0;
 
-const music = document.getElementById("music");
+const music = document.getElementById("song");
 
 music.volume = 0.8;
 
@@ -235,12 +234,12 @@ function checkName(){
 
 let name = document.getElementById("username").value.trim();
 
-if(name.toLowerCase() === "anandi"){
+if(name.toLowerCase() === "naina"){
 
 music.play();
 
 document.getElementById("greeting").innerHTML =
-"🎉 Happy Birthday " + name + " 🎉";
+"Welcome " + name + " ✨";
 
 nextSlide();
 
@@ -248,7 +247,7 @@ nextSlide();
 
 else{
 
-alert("Oops! This surprise is only for Anandi 🎉");
+alert("This page is only for Naina ✨");
 
 }
 
