@@ -3,7 +3,7 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
 <title>For Naina</title>
 
@@ -15,11 +15,14 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins', sans-serif;
+font-family:'Poppins',sans-serif;
 }
 
-body{
+html,body{
+height:100%;
+width:100%;
 overflow:hidden;
+position:fixed;
 }
 
 /* CONTAINER */
@@ -27,8 +30,9 @@ overflow:hidden;
 .container{
 display:flex;
 width:800%;
-height:100vh;
+height:100%;
 transition:transform 0.7s ease;
+touch-action:none;
 }
 
 /* SLIDES */
@@ -47,12 +51,22 @@ color:white;
 overflow:hidden;
 }
 
-/* ONLY MESSAGE SLIDE SCROLL */
+/* MESSAGE SLIDE */
 
 .message-slide{
-overflow-y:auto;
 justify-content:flex-start;
 padding-top:60px;
+}
+
+/* MESSAGE BOX (SCROLL ONLY HERE) */
+
+.message{
+max-width:500px;
+font-size:15px;
+line-height:1.7;
+max-height:60vh;
+overflow-y:auto;
+padding-right:5px;
 }
 
 /* BACKGROUNDS */
@@ -77,15 +91,6 @@ width:85%;
 max-width:320px;
 border-radius:20px;
 box-shadow:0 10px 25px rgba(0,0,0,0.4);
-}
-
-/* MESSAGE */
-
-.message{
-max-width:500px;
-font-size:15px;
-line-height:1.7;
-margin-bottom:20px;
 }
 
 /* BUTTON */
@@ -161,7 +166,7 @@ width:90%;
 
 </div>
 
-<!-- MESSAGE SLIDE (ONLY SCROLLABLE IF NEEDED) -->
+<!-- MESSAGE SLIDE -->
 
 <div class="slide message-slide">
 
